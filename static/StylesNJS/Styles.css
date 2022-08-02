@@ -1,0 +1,90 @@
+body{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;}
+
+.Welcome_Note_Box{
+text-align: center;
+padding-top:1%
+}
+.Welcome_Note{
+font-size:25px;
+color: rgb(0,0,0,0.6)
+}
+
+.Main_Box{ margin: auto;
+padding:20px;
+background: rgba(255, 255, 255, 0.7);
+width:90%;
+top: 50%;
+margin-top:2%;
+border-radius: 15px 70px;;}
+
+input {
+margin-bottom:10px;
+margin-top:5px;}
+
+label{
+margin-top:15px;
+}
+
+.input_field{}
+
+.colon{}
+
+.form-control{
+border-radius:0;
+border:0;
+outline:0;
+border-bottom: 2px solid black;
+margin-left:-200px;
+width:150%;
+}
+
+input.button{
+background-color:#0a0a23;;
+width:50px}
+
+.map_form1{
+text-align: center;
+margin:auto;
+width: 300px;
+height: 450px;
+padding-top: 60px;
+border-radius: 25px;
+background: url(../Images/image3.jpg);
+opacity: 0.9;
+background-repeat: no-repeat;
+background-attachment: contain;
+background-size: 100% 100%;
+}
+.Descriptions{
+color:rgb(0, 0, 0);
+font-variant: small-caps;
+font-family:verdana;
+}
+
+.Price{
+text-align: center;
+margin:auto;
+background-color:rgb(255, 255, 255,0.5);
+height: 100px;
+border-radius: 25px;
+
+margin-top: 100px;
+padding-top:25px;
+text-shadow: 1px 1px rgb(255, 255, 255,0.3);
+color:rgb(0, 0, 0);
+}
+
+form.lock::before{
+  content:'';
+  position:absolute;
+  z-index:999;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+button.on{ color:red; }

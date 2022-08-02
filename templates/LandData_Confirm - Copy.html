@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='StylesNJS/Styles.css') }}">
+</head>
+<body>
+<form action = "http://localhost:9000/Save_To_DB" method = "post">
+  <div class="form-row">
+      <div class="col">
+          <label > Road : </label>
+          <input type="number" name="road" step="any" class="form-control" value={{road}} readonly>
+      </div>
+      <div class="col">
+          <label > City : </label>
+          <input type="number" name="city" step="any" class="form-control" value={{city}} readonly>
+      </div>
+      <div class="col">
+          <label >  School : </label>
+          <input type="number" name="school" step="any" class="form-control" value={{school}} readonly>
+      </div>
+      <div class="col">
+          <label >  Hospital : </label>
+          <input type="number" name="hospital" step="any" class="form-control" value={{hospital}} readonly>
+      </div>
+      <div class="col">
+          <label > Bus : </label>
+          <input type="number" name="bus" step="any" class="form-control" value={{bus}} readonly>
+      </div>
+      <div class="col">
+          <label > Train : </label>
+          <input type="number" name="train" step="any" class="form-control" value={{train}} readonly>
+      </div>
+      <div class="col">
+          <label > Supper market : </label>
+          <input type="number" name="market" step="any" class="form-control" value={{market}} readonly>
+      </div>
+      <div class="col">
+          <input type="hidden" name="Prediction" value={{land_price}} readonly>
+      </div>
+      <h2>Land Price LKR: {{land_price}}</h2>
+      <h3>Do you accept this value</h3>
+
+  </div>
+    <input type="submit" name="submit_button" value="YES">
+    <input type="submit" name="submit_button" value="NO">
+</form>
+</body>
+</html>

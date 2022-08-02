@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='StylesNJS/bootstrap/css/bootstrap.min.css') }}">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='StylesNJS/Styles.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">UnlimitedAI.com</a>
+</nav>
+<div class="Welcome_Note_Box">
+    <p class="Welcome_Note">Welcome to land price predictor!</p>
+</div>
+    <div class="row Main_Box">
+        <div class="col-6 Form_Box">
+            <button type='button'>Enter Your Data (in Meters)</button>
+            <form action = "http://localhost:9000/Get_Distance_Inputs" method = "post">
+                <fieldset>
+<!--                <legend><center><h2><b> Enter Your Data (in Meters) </b></h2></center></legend><br>-->
+                <div class="Form_container">
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To City </label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="city" step="any" placeholder="Distance To City" class="form-control" value={{city}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Road</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="road" step="any" placeholder="Distance To Road" class="form-control" value={{road}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col ">
+                            <label > Distance To School</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="school" step="any" placeholder="Distance To School" class="form-control" value={{school}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label >  Distance To Hospital </label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="hospital" step="any" placeholder="Distance To Hospital" class="form-control" value={{hospital}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Bus Stand</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="bus" step="any" placeholder="Distance To Road Bus Stand" class="form-control" value={{bus}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Train Station</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="train" step="any" placeholder="Distance To Train Station" class="form-control" value={{train}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Supper market</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="market" step="any" placeholder="Distance To Supper market" class="form-control" value={{market}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Area of The Land</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="area" step="any" placeholder="Area of The Land (in Perch)" class="form-control" value={{area}} required>
+                        </div>
+                    </div>
+                </div>
+                <div class="Button_container">
+                    <input type="submit" class="btn btn-primary btn-dark" name="submit_button" value="Calculate Land price">
+                </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-6 Form_Box" >
+            <button type='button'> CLICK ON MAP</button>
+            <form action = "http://localhost:9000/Get_Distance_Inputs" method = "post">
+                <fieldset>
+<!--                <legend><center><h2><b> Enter Your Data (in Meters) </b></h2></center></legend><br>-->
+                <div class="Form_container">
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To City </label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="city" step="any" placeholder="Distance To City" class="form-control" value={{city}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Road</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="road" step="any" placeholder="Distance To Road" class="form-control" value={{road}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col ">
+                            <label > Distance To School</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="school" step="any" placeholder="Distance To School" class="form-control" value={{school}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label >  Distance To Hospital </label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="hospital" step="any" placeholder="Distance To Hospital" class="form-control" value={{hospital}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Bus Stand</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="bus" step="any" placeholder="Distance To Road Bus Stand" class="form-control" value={{bus}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Train Station</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="train" step="any" placeholder="Distance To Train Station" class="form-control" value={{train}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Distance To Supper market</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="market" step="any" placeholder="Distance To Supper market" class="form-control" value={{market}} required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label > Area of The Land</label>
+                        </div>
+                        <div class="col">
+                            <label class="colon"> : </label>
+                        </div>
+                        <div class="col input_field">
+                            <input type="number" name="area" step="any" placeholder="Area of The Land (in Perch)" class="form-control" value={{area}} required>
+                        </div>
+                    </div>
+                </div>
+                <div class="Button_container">
+                    <input type="submit" class="btn btn-primary btn-dark" name="submit_button" value="Calculate Land price">
+                </div>
+                </fieldset>
+            </form>
+            </form>
+
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener("load", lockForm2);
+
+var form1 = document.forms[0];
+var form2 = document.forms[1];
+
+btn1 = document.querySelectorAll('button')[0];
+btn2 = document.querySelectorAll('button')[1];
+
+btn1.addEventListener('click', lockForm);
+btn2.addEventListener('click', lockForm);
+
+function lockForm2(){
+  btn1.classList.toggle('on');
+  [].slice.call( form2.elements ).forEach(function(item){
+      item.disabled = !item.disabled;
+  });
+}
+
+function lockForm(){
+
+  btn1.classList.toggle('on');
+  [].slice.call( form1.elements ).forEach(function(item){
+      item.disabled = !item.disabled;
+  });
+  btn1.classList.toggle('on');
+  [].slice.call( form2.elements ).forEach(function(item){
+      item.disabled = !item.disabled;
+  });
+}
+
+</script>
+</html>
